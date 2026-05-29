@@ -1,0 +1,448 @@
+@import "tailwindcss";
+
+:root {
+  --font-lato: 'Lato', sans-serif;
+  --font-exo: 'Exo', sans-serif;
+}
+
+@theme {
+  --font-sans: var(--font-lato), ui-sans-serif, system-ui, sans-serif;
+  --font-exo: var(--font-exo), ui-sans-serif, system-ui, sans-serif;
+  
+  --color-sifs-orange: #F68A07;
+  --color-sifs-blue: #1A365D;
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+}
+
+@layer base {
+  body {
+    @apply font-sans;
+  }
+}
+
+body {
+  font-family: var(--font-lato);
+}
+
+.applyforensiclearning input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 2px solid #000;
+  border-radius: 0;
+  background-color: white;
+}
+
+.applyforensiclearning input[type="checkbox"]:checked {
+  background-color: #000;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+}
+
+/* Remove default select arrow */
+.applyforensiclearning select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23333'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1rem;
+  padding-right: 2.5rem;
+}
+
+
+/* Bottom pagination style */
+.achievement-swiper .swiper-pagination {
+  bottom: 85px !important;
+  left: 0 !important;
+  text-align: left;
+}
+
+.achievement-swiper .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background-color: #D08522; /* orange */
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+
+.achievement-swiper .swiper-pagination-bullet-active {
+  opacity: 1;
+  width: 20px;
+  border-radius: 8px;
+}
+
+
+button{cursor:pointer;}
+
+.social-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 9999px;
+  background: white;
+  color: #0b5ed7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  background: #084298;
+  color: white;
+}
+
+/* career css */
+
+.career-section.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+.career-section .job-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  background: #fff;
+}
+
+.career-section .job-icon {
+  width: 48px;
+  height: 48px;
+  background: #0a1b6f;
+  color: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.career-section .job-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.career-section .job-exp {
+  font-size: 12px;
+  border: 1px dashed #cbd5e1;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.career-section .job-edu,
+.career-section .job-deadline {
+  font-size: 13px;
+  color: #475569;
+  margin-top: 6px;
+}
+
+.career-section .job-desc {
+  position: relative;
+  max-height: 60px;
+  overflow: hidden;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.career-section .job-desc.expanded {
+  max-height: none;
+}
+
+.career-section .fade-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background: linear-gradient(to bottom, transparent, white);
+}
+
+.career-section .read-more {
+  font-size: 13px;
+  color: #0a1b6f;
+  margin-top: 6px;
+}
+
+.career-section .load-more {
+  background: #0a1b6f;
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 999px;
+}
+
+.input {
+  @apply w-full rounded-lg border border-gray-200 px-4 py-3 text-sm outline-none focus:border-[#0B10A4];
+}
+
+/* Hero Swiper Premium Styling */
+.hero-swiper {
+  --swiper-theme-color: #0B10A4;
+  --swiper-navigation-size: 20px;
+}
+
+.hero-swiper .swiper-pagination-bullet {
+  background: white;
+  opacity: 0.6;
+  width: 8px;
+  height: 8px;
+  transition: all 0.3s ease;
+}
+
+.hero-swiper .swiper-pagination-bullet-active {
+  opacity: 1;
+  width: 24px;
+  border-radius: 4px;
+  background: white;
+}
+
+.hero-swiper .swiper-button-next,
+.hero-swiper .swiper-button-prev {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: white;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-swiper .swiper-button-next:hover,
+.hero-swiper .swiper-button-prev:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.hero-swiper .swiper-button-next:after,
+.hero-swiper .swiper-button-prev:after {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .hero-swiper .swiper-button-next,
+  .hero-swiper .swiper-button-prev {
+    display: none;
+  }
+}
+
+/* Fix for API-injected Contact Details */
+.api-content-styles {
+  font-family: inherit !important;
+}
+
+.api-content-styles * {
+  /* This clears the weird grey colors from the backend */
+  color: #374151 !important; 
+  font-family: inherit !important;
+}
+
+.api-content-styles span.fas, 
+.api-content-styles span.fa, 
+.api-content-styles span.far {
+  /* This colors the icons to your brand blue */
+  color: #0C2783 !important;
+  width: 20px;
+  margin-right: 10px;
+}
+
+.api-content-styles ul {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.api-content-styles li {
+  list-style: none !important;
+  margin-bottom: 12px !important;
+}
+
+
+.html-content h4 {
+  font-weight: 700;
+  color: #04063E;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.html-content p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.html-content b {
+  color: #04063E;
+}
+
+
+.html-content img {
+  display: inline-block;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+.html-render-zone h4 {
+  font-weight: 800;
+  color: #04063E;
+  margin: 1.5rem 0 0.5rem 0;
+  font-size: 1.2rem;
+}
+.html-render-zone p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+.html-render-zone b, .html-render-zone strong {
+  color: #04063E;
+  font-weight: 700;
+}
+.html-render-zone ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+.html-render-zone a {
+  color: #0B10A4;
+  text-decoration: underline;
+}
+
+.html-render-zone img {
+  border-radius: 0.5rem;
+  margin: 10px auto;
+  display: inline-block;
+  border: 1px solid #eee;
+}
+
+.api-content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.api-content p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  /* color: #374151; */
+  color:#000000;
+}
+
+.api-content ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.api-content li {
+  margin-bottom: 0.5rem;
+}
+
+.api-content b, .api-content strong {
+  font-weight: 700;
+  color: #000;
+}
+
+{/*.address-zone ul{
+  padding-left:-10px!important;
+}
+.address-zone span{
+  color:#2A2A2A!important;
+  font-size:14px!important;
+}
+.address-zone ul .deadline, .address-zone ul .education, .address-zone ul .experience{display:flex!important}
+.address-zone ul li .fas, .address-zone ul li .fa, .address-zone ul li .far{
+  color:#283DDA !important;
+  width:25px !important;
+  height:25px !important;
+  padding:6px !important;
+  border:1px solid #283DDA !important;
+  border-radius:4px !important;
+  display: flex!important;
+  align-items:center!important;
+  justify-content: center!important;
+  margin-right:5px!important;
+}*/}
+
+.api-content .ql-align-justify {
+  text-align: justify;
+  font-size: 16px!important;
+}
+
+.ql-align-justify br {
+  display:none;
+}
+
+.api-content h4 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: #04063E;
+}
+
+.ql-align-justify img{
+  margin-bottom:20px;
+}
+
+.api-content {
+  font-size: 16px !important;
+}
+
+.api-content p,
+.api-content span,
+.api-content div,
+.api-content li,
+.api-content a {
+  font-size: inherit !important;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation-duration: 0.2s;
+  animation-fill-mode: both;
+}
+
+.fade-in {
+  animation-name: fadeIn;
+}
+
+.slide-in-from-top-2 {
+  animation-name: slideInFromTop;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
